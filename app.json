@@ -9,7 +9,16 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "infoPlist": {
+        "NSFileProviderAuthorizationUsageDescription": "Приложение требует доступ к файловой системе для работы с заметками"
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.myapp",
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.com.myapp"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,6 +33,22 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true,
+          "useSQLCipher": true,
+          "android": {
+            "enableFTS": false,
+            "useSQLCipher": false
+          },
+          "ios": {
+            "customBuildFlags": [
+              "-DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_SNAPSHOT=1"
+            ]
+          }
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",

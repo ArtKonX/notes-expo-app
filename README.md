@@ -1,50 +1,115 @@
-# Welcome to your Expo app 👋
+## Мобильное приложение заметок на React Native(EXPO)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<div style="width: 100%; display: flex; justify-content: center; padding: 20px 0;">
+    <div style="width: 220px; height: 70px; padding: 0 10px; display: flex; align-items: center; justify-content: center; background-color: #AE0001; border-radius: 10px">
+        <span style="font-size: 35px; color: #d0d0c0; margin-bottom: 5px">
+                Magic<span style="color: #D3A625; font-weight: bold">Notes</span>
+        </span>
+    </div>
+</div>
 
-## Get started
+### Описание проекта
+Мобильное приложение MagicNotes с графическим пользовательским интерфейсом поддерживает создание, редактирование,
+удаление и поиск заметок в рамках работы любой организации. Приложение обеспечивает удобство ведения записей во время
+разлтчных мероприятий
 
-1. Install dependencies
+### Запуск приложения
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+#### Клонирование репозитория
+```
+git clone https://github.com/ArtKonX/notes-expo-app.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+#### Установка зависимостей
+```
+yarn
+```
 
-## Learn more
+#### Запуск приложения
+```
+yarn start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### Основные функции приложения:
+1. Создание заметки – возможность создания новой записи с указанием заголовка, даты, времени и содержания ✅
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/1.png" height="550" style="border-radius: 46px; object-fit: contain;">
+</div>
 
-## Join the community
+Дату и время можно не указывать, тогда эта информация будет выбрана автоматически.
+Выбрать время и дату можно по нажатию на область 1 или 2(Показаны стрелками)
 
-Join our community of developers creating universal apps.
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/2.png" height="550" style="border-radius: 46px; object-fit: contain;">
+</div>
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/2(3).png" height="550" style="border-radius: 46px; object-fit: contain;">
+</div>
+
+1. Редактирование и удаление заметки – возможность изменения существующей записи и ее удаление ✅
+   При нажатии на подобные блоки(показаны стрелками) происходит переход на страницу просмотра, редактирования и удаления заметки.
+
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/3.png" height="550" style="border-radius: 46px; object-fit: contain;">
+</div>
+
+   На этой странице также, как и на странице создания заметки есть возможность сохранить изменения выбрать дату и время, если это требуется и удалить заметку(блок взаимодействия показан стрелкой)
+
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/4.png" height="550" style="border-radius: 46px; object-fit: contain;">
+</div>
+
+1. Поиск заметки – функция поиска, по ключевым словам, дате, времени или другим параметрам ✅
+   Выполняется в зависимости от выбранного места сохрания(SQLite, AsyncStorage или файловой системы)
+
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/5.png" height="550" style=" border-radius: 46px; object-fit: contain;">
+</div>
+
+### Варианты хранения данных:
+
+Приложение придусматривает два способа хранения заметок:
+- В базе данных SQLite (локальное хранение).
+- AsyncStorage
+- С использованием файловой системы устройства (например, сохранение заметок в виде файлов).
+#### Выбрать место хранения можно:
+  1. В приветствии при первом открытии приложения:
+
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/6.png" height="550" style="border-radius: 46px; object-fit: contain;">
+</div>
+
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/7.png" height="550" style="border-radius: 46px; object-fit: contain;">
+</div>
+
+  2. В иконке справа ввиде дискеты:
+
+<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
+    <img src="./images-info/8.png" height="550" style=" border-radius: 46px; object-fit: contain;">
+</div>
+
+### Стек технологий
+1. React Native
+2. EXPO
+3. SQLite
+4. TypeScript
+5. React Native Context API
+6. NativeWind
+
+### Замечания
+##### Приложение протестировано только на iPhone, работоспособность на других устройствах не гарантируется
+
+### Планы на будущие обновления приложения
+1. Красивая анимация переходов
+2. Лоадер для загрузок
+3. Тестирование приложения
+4. Улучшение дизайна
+5. Загрузка приложения в AppStore
+6. Оптимизация под Android
+7. Загрузка приложения в GooglePlay и RuStore
+
+### Команда разработчиков
+<a href="https://github.com/ArtKonX" style='color: black; font-weight: bold'>ArtKonX</a> — ведущий разработчик проекта
