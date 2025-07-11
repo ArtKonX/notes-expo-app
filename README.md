@@ -1,12 +1,6 @@
 ## Мобильное приложение заметок на React Native(EXPO)
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 20px 0;">
-    <div style="width: 220px; height: 70px; padding: 0 10px; display: flex; align-items: center; justify-content: center; background-color: #AE0001; border-radius: 10px">
-        <span style="font-size: 35px; color: #d0d0c0; margin-bottom: 5px">
-                Magic<span style="color: #D3A625; font-weight: bold">Notes</span>
-        </span>
-    </div>
-</div>
+<img src="./images-info/0.png" height="550" style="border-radius: 46px; object-fit: contain;">
 
 ### Описание проекта
 Мобильное приложение MagicNotes с графическим пользовательским интерфейсом поддерживает создание, редактирование,
