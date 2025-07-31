@@ -1,6 +1,6 @@
 ## Мобильное приложение заметок на React Native(EXPO)
 
-<img src="./images-info/0.png" height="550" style="border-radius: 46px; object-fit: contain;">
+<img src="./images-info/0.png">
 
 ### Описание проекта
 Мобильное приложение MagicNotes с графическим пользовательским интерфейсом поддерживает создание, редактирование,
@@ -27,40 +27,28 @@ yarn start
 ### Основные функции приложения:
 1. Создание заметки – возможность создания новой записи с указанием заголовка, даты, времени и содержания ✅
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/1.png" height="550" style="border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/1.png">
 
 Дату и время можно не указывать, тогда эта информация будет выбрана автоматически.
 Выбрать время и дату можно по нажатию на область 1 или 2(Показаны стрелками)
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/2.png" height="550" style="border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/2.png">
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/2(3).png" height="550" style="border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/2(3).png">
 
-1. Редактирование и удаление заметки – возможность изменения существующей записи и ее удаление ✅
+2. Редактирование и удаление заметки – возможность изменения существующей записи и ее удаление ✅
    При нажатии на подобные блоки(показаны стрелками) происходит переход на страницу просмотра, редактирования и удаления заметки.
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/3.png" height="550" style="border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/3.png">
 
    На этой странице также, как и на странице создания заметки есть возможность сохранить изменения выбрать дату и время, если это требуется и удалить заметку(блок взаимодействия показан стрелкой)
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/4.png" height="550" style="border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/4.png">
 
-1. Поиск заметки – функция поиска, по ключевым словам, дате, времени или другим параметрам ✅
+3. Поиск заметки – функция поиска, по ключевым словам, дате, времени или другим параметрам ✅
    Выполняется в зависимости от выбранного места сохрания(SQLite, AsyncStorage или файловой системы)
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/5.png" height="550" style=" border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/5.png">
 
 ### Варианты хранения данных:
 
@@ -71,19 +59,13 @@ yarn start
 #### Выбрать место хранения можно:
   1. В приветствии при первом открытии приложения:
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/6.png" height="550" style="border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/6.png">
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/7.png" height="550" style="border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/7.png">
 
   2. В иконке справа ввиде дискеты:
 
-<div style="width: 100%; display: flex; justify-content: center; padding: 25px 0;">
-    <img src="./images-info/8.png" height="550" style=" border-radius: 46px; object-fit: contain;">
-</div>
+<img src="./images-info/8.png">
 
 ### Стек технологий
 1. React Native
@@ -106,4 +88,4 @@ yarn start
 7. Загрузка приложения в GooglePlay и RuStore
 
 ### Команда разработчиков
-<a href="https://github.com/ArtKonX" style='color: black; font-weight: bold'>ArtKonX</a> — ведущий разработчик проекта
+<a href="https://github.com/ArtKonX">ArtKonX</a> — ведущий разработчик проекта

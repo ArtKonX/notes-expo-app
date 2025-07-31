@@ -8,7 +8,7 @@ import DateTimePicker from "@/components/ui/DateTimePicker/DateTimePicker";
 import { createNote } from "@/notes-storage/NotesStorage";
 import { useRouter } from "expo-router";
 import { useContext, useState } from "react";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, TouchableWithoutFeedback, View } from "react-native";
 
 interface NoteState {
     title: string,
@@ -67,6 +67,7 @@ const Create = () => {
 
                 if (createData?.status === 'ok') {
                     setNote({ title: '', note: '', date: new Date() })
+                    setIsShowActionMenu(false)
                     router.push('/home')
                 }
             })()
@@ -88,33 +89,37 @@ const Create = () => {
     ]
 
     return (
-        <View className="bg-[#d0d0c0] dark:bg-[#98988d] h-[100%]">
-            <ScrollView
-                className="relative px-[15px] mt-[65px]"
-                contentContainerStyle={{
-                    height: "100%",
-                }}
-            >
-                <View>
-                    <Text className='text-start w-full text-4xl font-bold'>
-                        Создать заметку
-                    </Text>
-                    <View className="absolute right-0 top-0 max-w-[40px] w-[45%]">
-                        <SelectActionWithNoteBtn showActionMenu={showActionMenu} isShowActionMenu={isShowActionMenu} text='...' />
-                        {isShowActionMenu && (
-                            <ListActions colorBorder='border-[#AE0001]' dataActions={dataActions} isFadeMenu={isFadeMenu}/>
-                        )}
+        <TouchableWithoutFeedback
+            style={{ flex: 1 }}
+            onPress={() => setIsShowActionMenu(false)} >
+            <View className="bg-[#d0d0c0] dark:bg-[#98988d] h-[100%]">
+                <ScrollView
+                    className="relative px-[15px] mt-[65px]"
+                    contentContainerStyle={{
+                        height: "100%",
+                    }}
+                >
+                    <View>
+                        <Text className='text-start w-full text-4xl font-bold'>
+                            Создать заметку
+                        </Text>
+                        <View className="absolute right-0 top-0 max-w-[40px] w-[45%]">
+                            <SelectActionWithNoteBtn showActionMenu={showActionMenu} isShowActionMenu={isShowActionMenu} text='...' />
+                            {isShowActionMenu && (
+                                <ListActions colorBorder='border-[#AE0001]' dataActions={dataActions} isFadeMenu={isFadeMenu} />
+                            )}
+                        </View>
                     </View>
-                </View>
-                <View className="mt-6">
-                    <DateTimePicker isDatePickerVisible={isDatePickerVisible} showDatePicker={showDatePicker} selectedDate={note.date} handleDatePick={handleDatePick} />
-                </View>
-                <View className="relative">
-                    <TitleInputField onChange={onChangeNote} title={note.title} name='title' />
-                    <ContentInputField onChange={onChangeNote} note={note.note} name='note' />
-                </View>
-            </ScrollView>
-        </View>
+                    <View className="mt-6">
+                        <DateTimePicker isDatePickerVisible={isDatePickerVisible} showDatePicker={showDatePicker} selectedDate={note.date} handleDatePick={handleDatePick} />
+                    </View>
+                    <View className="relative">
+                        <TitleInputField onChange={onChangeNote} title={note.title} name='title' />
+                        <ContentInputField onChange={onChangeNote} note={note.note} name='note' />
+                    </View>
+                </ScrollView>
+            </View>
+        </TouchableWithoutFeedback>
     )
 }
 
